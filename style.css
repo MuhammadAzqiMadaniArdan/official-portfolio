@@ -245,9 +245,14 @@ main {
 .aboutMe .about-skill img {
   width: 50px;
 }
+.about-quote q{
+  font-size: 130%;
+
+}
 .about-quote {
   text-align: center;
 }
+
 .line-card {
   background: linear-gradient(var(--gradient-1), var(--gradient-2));
   padding: 5px;
@@ -746,7 +751,7 @@ footer {
 }
 #sidenav:hover {
     /* padding: 0px 0px 0px 0px; */
-    width: 50%;
+    width: 60%;
 }
 #sidenav a:hover {
     color: var(--text-secondary);
@@ -829,7 +834,12 @@ footer {
   #sidenav a img {
     max-width: 20px;
   }
-  .about-skill,.aboutMe q{
-    margin-right: 50%;
+  .about-skill,.aboutMe q,.about-quote p{
+    margin-right: 70%;
+    font-size: 12px;
+  }
+  .about-quote p{
+    font-size: 16px;
+    
   }
 }
