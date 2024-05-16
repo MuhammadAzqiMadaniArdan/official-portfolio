@@ -79,9 +79,6 @@ a {
 /* .cv-option{
         margin-bottom: 10px;
     } */
-.cv-option a {
-  padding-bottom: 10%;
-}
 
 #sidenav a:hover {
   color: var(--text-secondary);
@@ -716,19 +713,42 @@ footer {
 /* certificate slider */
 
 /* Media screen */
+@media (max-width: 890px) {
+    #sidenav a{
+      padding: 0px 0px 0px 15%;
+    }
+    
+}
+@media (max-width: 1172px) {
+    #sidenav a img {
+      max-width: 60px;
+    }
+    
+    #sidenav a img {
+      max-width: 60px;
+    }
+    #sidenav:hover {
+      /* padding: 0px 0px 0px 0px; */
+      width: 50%;
+    }
+}
 @media (max-width: 768px) {
   #sidenav {
     /* display: none; */
     width: 10%;
-  }
-  #sidenav a img {
-    max-width: 30px;
-  }
-  #sidenav:hover {
+}
+  #sidenav a{
+    /* display: none; */
+    padding: 0px 0px 0px 17%;
+}
+#sidenav a img {
+    max-width: 40px;
+}
+#sidenav:hover {
     /* padding: 0px 0px 0px 0px; */
     width: 50%;
-  }
-  #sidenav a:hover {
+}
+#sidenav a:hover {
     color: var(--text-secondary);
     background-color: var(--bg-secondary);
     filter: none;
@@ -795,7 +815,7 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .main-text .name {
     font-size: 1.2em;
   }
@@ -805,5 +825,11 @@ footer {
   }
   .main-image img {
     max-width: 200px;
+  }
+  #sidenav a img {
+    max-width: 20px;
+  }
+  .about-skill,.aboutMe q{
+    margin-right: 50%;
   }
 }
