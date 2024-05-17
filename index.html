@@ -10,13 +10,11 @@
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="style.css">
 
-
 </head>
 <body>
-    
 
 <div class="main">
-<div id="sidenav" >
+<nav id="sidenav" >
     <!-- <img id="logo"  src="Images/Logo.png" alt="logo-cv"> -->
     <div class="link-group">
 
@@ -41,9 +39,9 @@
             <img  src="https://albumprojek.netlify.app/img/download.png" alt="download-logo"><p>Download CV</p>
         </a>
     </div>
-</div>
+  </nav>
 <div class="container" >
-
+  <header>
     <div class="navbar" >
         
         <ul>
@@ -53,6 +51,7 @@
             <li><a href="https://www.instagram.com/azqiardan_10/"><img  src="https://albumprojek.netlify.app/img/contact-ig.png" alt="instagram"></a></li>
         </ul>
     </div>
+  </header>
     <main class="profile">
         <div class="main-text">
           <h3>Hello,Its me</h3>
@@ -60,10 +59,10 @@
             <h2 class="job-switch">And I'm <span class="auto-input" aria-label="changer"></span></h2>
           <!-- <p>Welcome to my official Portfolio Website Where I put all my work related to my website and many more.</p> -->
         </div>
-        <div class="main-image">
+        <aside class="main-image">
           <img  src="https://albumprojek.netlify.app/img/me-1.png" alt="front-images">
             <img  src="https://albumprojek.netlify.app/img/graph.png" alt="back-image" >
-        </div>
+        </aside>
 </main>
 <section class="aboutMe" id="about">
     <div class="about-image">
@@ -344,7 +343,6 @@
 
   <br>
   
-  <!-- The dots/circles -->
 <section class="contact" id="contact">
 <div class="contact-title">
 
@@ -382,99 +380,8 @@
 </div>
 
 </div>
-</body>
-</html>
 <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script  src="script.js"></script>
+</body>
 
-<script>
-    /* Open when someone clicks on the span element */
-
-function openNav() {
-  document.getElementById("sidenav").style.width = "50%";
-
-}
-
-
-/* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-  document.getElementById("sidenav").style.width = "10%";
-}
-
-let typed = new Typed(".auto-input", {
-      strings: ["Student", "Back-end Developer", "Web Developer"],
-      typeSpeed: 100,
-      backSpeed: 100,
-      loop: true
-    })
-
-    
-// script slider
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("portfolio-card");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-// script slider end
-  </script>
-
-<script>
-    let certificateIndex = 1;
-certificateSlide(certificateIndex);
-
-// setelah/sebelumious controls
-function certificatePlus(n) {
-  certificateSlide(certificateIndex += n);
-}
-
-// Thumbnail image controls
-function liveSlide(n) {
-  certificateSlide(certificateIndex = n);
-}
-
-function certificateSlide(n) {
-  let i;
-  let slides = document.getElementsByClassName("certificate-slide");
-  let dots = document.getElementsByClassName("democ");
-  let keteranganText = document.getElementById("keterangan");
-  if (n > slides.length) {certificateIndex = 1}
-  if (n < 1) {certificateIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  if (certificateIndex > slides.length) {certificateIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[certificateIndex-1].style.display = "block";
-  dots[certificateIndex-1].className += " active";
-  setTimeout(showSlides, 2000);
-  keteranganText.innerHTML = dots[certificateIndex-1].alt;
-
-}
-</script>
+</html>
