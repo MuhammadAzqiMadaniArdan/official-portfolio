@@ -738,11 +738,11 @@ footer {
     }
 }
 @media (max-width: 768px) {
-  #sidenav {
-    /* display: none; */
+  /* #sidenav {
+    display: none;
     width: 0%;
-    width: 10%;
-}
+    max-width: 10%;
+} */
   #sidenav a{
     /* display: none; */
     padding: 0px 0px 0px 17%;
