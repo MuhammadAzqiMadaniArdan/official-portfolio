@@ -202,7 +202,7 @@ main {
 .aboutMe {
   display: flex;
   justify-content: center;
-  /* background:linear-gradient(to bottom left,var(--dark-cosmos),var(--bg-primary)); */
+  /* background:linear-gradient(to bottom left,var(--dark-cosmos),var(--gradient-2)); */
   max-width: 100%;
   padding: 50px 20px;
 }
@@ -238,7 +238,7 @@ main {
 }
 .aboutMe .about-skill ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
   margin: 10px 0px;
 }
@@ -819,6 +819,9 @@ footer {
   .main-image {
     padding: 36% 2%;
   }
+  .ability-card{
+    font-size:15px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -842,5 +845,14 @@ footer {
   .about-quote p{
     font-size: 16px;
     
+  }
+  .ability-card{
+    font-size:10px;
+  }
+  .portfolio-text{
+    font-size:13px;
+  }
+  .certificate-title h4{
+    font-size:12px;
   }
 }
