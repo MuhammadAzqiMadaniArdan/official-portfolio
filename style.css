@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-style: normal;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 :root {
   --font-family: sans-serif;
@@ -320,13 +323,13 @@ main {
   background-color: var(--text-invert);
   color: var(--sea-foam);
   box-shadow: 2px 5px 5px 5px var(--sea-foam);
-  /* filter: none; */
   filter: invert(100%);
 }
 
 .ability-card img {
   width: 50px;
   filter: invert(100%);
+  margin-bottom: 10px;
 }
 .ability-image {
   display: flex;
@@ -346,7 +349,6 @@ main {
   margin: 10px 0px;
 }
 .portfolio {
-  /* background:linear-gradient(to top right,var(--bg-primary),var(--dark-cosmos)); */
   max-width: 100%;
   max-height: 100%;
   padding: 50px 20px;
@@ -375,7 +377,6 @@ main {
   background-color: var(--bg-primary);
   padding: 10px;
   border-radius: 50px;
-  /* margin: 20px; */
   display: flex;
   justify-content: center;
 }
