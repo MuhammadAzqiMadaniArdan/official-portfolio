@@ -21,6 +21,7 @@ html{
   --dark-cosmos: #010101;
   --sea-foam: #ecfdfb;
   --transition-delay: 300ms ease 0s;
+  --zoom-transition: 100ms ease 2s;
 }
 body {
   background: linear-gradient(
@@ -52,6 +53,25 @@ a {
   flex-direction: column;
   justify-content: space-between;
   z-index: 3;
+}
+
+.topper{
+  min-width : 5%;
+  min-height: 10%;
+  z-index: 5;
+  background-color: #b2ffe1;
+  border-radius: 50%;
+  display: flex;
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  cursor: pointer;
+  /* background: transparent; */
+}
+
+.topper a{
+font-size: 25px;
+margin: auto;
 }
 
 .main {
@@ -247,6 +267,30 @@ main {
 }
 .aboutMe .about-skill img {
   width: 50px;
+}
+.aboutMe .about-skill img:hover {
+  transition: 100ms ease-out;
+  width: 60px;
+  cursor:pointer;
+}
+.aboutMe .dango{
+  font-size: 60px;
+  position: sticky;
+  /* top: 40px; */
+  animation-name: cartwheeling;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes cartwheeling {
+  from {
+    transform: rotate(0);
+    left: 600px; 
+  }
+  to {
+    transform: rotate(360deg);
+    left: 800px;
+  }
 }
 .about-quote q{
   font-size: 130%;
@@ -744,6 +788,10 @@ footer {
     width: 0%;
     max-width: 10%;
 } */
+ .topper{
+  min-width: 10%;
+  right: 5%;
+ }
   #sidenav a{
     /* display: none; */
     padding: 0px 0px 0px 17%;
@@ -826,6 +874,11 @@ footer {
 }
 
 @media (max-width: 520px) {
+
+  .topper{
+    min-width: 15%;
+   }
+
   .main-text .name {
     font-size: 1.2em;
   }
